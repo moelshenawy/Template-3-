@@ -4,7 +4,7 @@
 
 ## Overview
 
-- This project is a Web Page Designed By CSS & HTML *(Only)*
+- This project is a Web Page Designed By CSS & HTML & JavaScript _(Only)_
 - **Designed by: Elzero**
 - **Development by: Me**
 
@@ -27,5 +27,7 @@
   - Google Fonts
 
 - index.html
+
+- main.js
 
 ---
