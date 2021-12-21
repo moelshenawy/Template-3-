@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Template03</title>
     <!-- Render All Elements Normally -->
     <link rel="stylesheet" href="CSS/normalize.css" />
     <!-- Main Template CSS File -->
@@ -38,48 +38,54 @@
               </div>
               <ul class="links">
                 <li>
-                  <a href="#"
+                  <a href="#testimonials"
                     ><i class="far fa-comments fa-fw"></i> Testimonials</a
                   >
                 </li>
                 <li>
-                  <a href="#"><i class="far fa-user fa-fw"></i> Team Members</a>
+                  <a href="#team"
+                    ><i class="far fa-user fa-fw"></i> Team Members</a
+                  >
                 </li>
                 <li>
-                  <a href="#"><i class="far fa-building fa-fw"></i> Services</a>
+                  <a href="#services"
+                    ><i class="far fa-building fa-fw"></i> Services</a
+                  >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#our-skills"
                     ><i class="far fa-check-circle fa-fw"></i> Our Skills</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#work-steps"
                     ><i class="far fa-clipboard fa-fw"></i>How it Works</a
                   >
                 </li>
               </ul>
               <ul class="links">
                 <li>
-                  <a href="#"
-                    ><i class="far fa-calendar-alt fa-fw"></i> Events</a
+                  <a href="#events"
+                    ><i class="far fa-calendar-alt fa-fw"></i>Events</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#pricing"
                     ><i class="fas fa-server fa-fw"></i> Pricing Plans</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#videos"
                     ><i class="far fa-play-circle fa-fw"></i> Top Videos</a
                   >
                 </li>
                 <li>
-                  <a href="#"><i class="far fa-chart-bar fa-fw"></i> Stats</a>
+                  <a href="#stats"
+                    ><i class="far fa-chart-bar fa-fw"></i> Stats</a
+                  >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#discount"
                     ><i class="far fa-percent fa-fw"></i> Request A Discount</a
                   >
                 </li>
@@ -591,7 +597,7 @@
 
     <!-- Start Skills -->
 
-    <div class="our-skills">
+    <div class="our-skills" id="our-skills">
       <h2 class="main-title">Our Skills</h2>
       <div class="container">
         <img src="images/skills.png" alt="" />
@@ -599,26 +605,26 @@
           <div class="skill">
             <h3>HTML <span>80%</span></h3>
             <div class="the-progress">
-              <span style="width: 80%"></span>
+              <span style="width: 0" data-width="80%"></span>
             </div>
           </div>
 
           <div class="skill">
             <h3>CSS <span>85%</span></h3>
             <div class="the-progress">
-              <span style="width: 85%"></span>
+              <span style="width: 0" data-width="85%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>JavaScript <span>70%</span></h3>
             <div class="the-progress">
-              <span style="width: 70%"></span>
+              <span style="width: 0" data-width="70%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>Python <span>80%</span></h3>
             <div class="the-progress">
-              <span style="width: 80%"></span>
+              <span style="width: 0" data-width="80%"></span>
             </div>
           </div>
         </div>
@@ -685,19 +691,19 @@
         <div class="info">
           <div class="time">
             <div class="unit">
-              <span>15</span>
+              <span class="days"></span>
               <span>Days</span>
             </div>
             <div class="unit">
-              <span>08</span>
+              <span class="hours"></span>
               <span>Hours</span>
             </div>
             <div class="unit">
-              <span>45</span>
+              <span class="minutes"></span>
               <span>Minutes</span>
             </div>
             <div class="unit">
-              <span>55</span>
+              <span class="seconds"></span>
               <span>Seconds</span>
             </div>
           </div>
@@ -811,22 +817,22 @@
       <div class="container">
         <div class="box">
           <i class="far fa-user fa-2x fa-fw"></i>
-          <span class="number">300</span>
+          <span class="number" data-goal="100">0</span>
           <span class="text">Clinets</span>
         </div>
         <div class="box">
           <i class="fas fa-code fa-2x fa-fw"></i>
-          <span class="number">400</span>
+          <span class="number" data-goal="300">0</span>
           <span class="text">Projects</span>
         </div>
         <div class="box">
           <i class="fas fa-globe-asia fa-2x fa-fw"></i>
-          <span class="number">12</span>
+          <span class="number" data-goal="400">0</span>
           <span class="text">Countries</span>
         </div>
         <div class="box">
           <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-          <span class="number">500k</span>
+          <span class="number" data-goal="500">0</span>
           <span class="text">Money</span>
         </div>
       </div>
@@ -926,5 +932,7 @@
       <p class="copyright">Designed By Elzero &#128151; &copy; ElShenawy</p>
     </div>
     <!-- End Footer -->
+
+    <script src="main.js"></script>
   </body>
 </html>
