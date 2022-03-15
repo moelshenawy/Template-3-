@@ -70,3 +70,17 @@ let counter = setInterval(() => {
   document.querySelector(".seconds").innerHTML =
     seconds < 10 ? `0${seconds}` : seconds;
 }, 1000);
+
+// Handle Mega menu
+
+let menu = document.querySelector(".mega-menu");
+let link = document.querySelector(".main-nav li:last-child");
+
+link.addEventListener("click", () => {
+  if (menu.classList.toggle("activate")) {
+    menu.classList.add("activate");
+  } else {
+    console.log("FALSE");
+    menu.classList.remove("activate");
+  }
+});

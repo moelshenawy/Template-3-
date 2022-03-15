@@ -176,10 +176,11 @@ ul {
     margin: auto;
   }
 }
-.header .main-nav > li:hover .mega-menu {
-  opacity: 1;
-  z-index: 100;
-  top: calc(100% + 1px);
+
+.activate {
+  opacity: 1 !important;
+  z-index: 1 !important;
+  top: calc(100% + 1px) !important  ;
 }
 .header .main-nav > li > a {
   display: flex;
