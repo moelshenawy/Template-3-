@@ -1491,7 +1491,26 @@ ul {
   max-width: 1090%;
 }
 /* End Discount */
-
+.up {
+  position: fixed;
+  z-index: 100;
+  bottom: 20px;
+  right: -30px;
+  background-color: var(--main-color-alt);
+  color: #ececec;
+  padding: 5px;
+  border-radius: 4px;
+  font-family: "Cairo";
+  cursor: pointer;
+  transition: 0.2s;
+}
+.up.show {
+  right: 20px;
+}
+.up:hover {
+  background-color: var(--main-color);
+  padding: 7px;
+}
 /* Start Footer */
 .footer {
   background-color: #191919;
@@ -1510,8 +1529,6 @@ ul {
   }
 }
 
-.footer .box {
-}
 .footer .box h3 {
   color: white;
   font-size: 50px;

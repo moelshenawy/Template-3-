@@ -72,15 +72,27 @@ let counter = setInterval(() => {
 }, 1000);
 
 // Handle Mega menu
-
 let menu = document.querySelector(".mega-menu");
 let link = document.querySelector(".main-nav li:last-child");
 
 link.addEventListener("click", () => {
-  if (menu.classList.toggle("activate")) {
-    menu.classList.add("activate");
-  } else {
-    console.log("FALSE");
-    menu.classList.remove("activate");
-  }
+  menu.classList.toggle("activate")
+    ? menu.classList.add("activate")
+    : menu.classList.remove("activate");
+});
+
+// Handle To Top Button
+let upBtn = document.querySelector(".up");
+window.onscroll = function () {
+  this.scrollY >= 1000
+    ? upBtn.classList.add("show")
+    : upBtn.classList.remove("show");
+};
+
+upBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
