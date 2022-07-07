@@ -1,34 +1,37 @@
 // Our Skills increment Variables
-let progressSpans = document.querySelectorAll(".the-progress span");
 let theProgressSec = document.querySelector(".our-skills");
+let progressSpans = document.querySelectorAll(".the-progress span");
 
-// Our Awesome Stats Counter..
-// Start Variables
-let numbers = document.querySelectorAll(".stats .number");
-let statSec = document.querySelector(".stats");
-let started = false; // function not started Yet!
+// Our Awesome Stats Counter
+let nums = document.querySelectorAll(".stats .number");
+let statsSec = document.querySelector(".stats");
 
 // Start onscroll For each element Function
-window.onscroll = () => {
-  if (window.scrollY >= statSec.offsetTop + 20) {
-    // If Function didn't start
-    if (!started) {
-      // Then Start The Function
-      numbers.forEach((num) => startCount(num));
-    }
-    // Don't Start The Function Again
-    started = true;
-    // Our Skills increment function
-  } else if (window.scrollY >= theProgressSec.offsetTop + 20) {
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= theProgressSec.offsetTop + 20) {
     progressSpans.forEach((span) => {
       span.style.width = span.dataset.width;
     });
   }
-};
+});
+
+// Function is Active ? / No
+let isActive = false;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= statsSec.offsetTop + 20) {
+    if (!isActive) {
+      nums.forEach((num) => {
+        startCount(num);
+      });
+    }
+    isActive = true;
+  }
+});
 
 // Start Counter Function
 function startCount(e) {
-  // Get Custom Atrr (dataset)
+  // Get Custom Atr (dataset)
   let goal = e.dataset.goal;
 
   // Set Interval
@@ -46,7 +49,7 @@ function startCount(e) {
 
 // Set Down Count Timer For The End Of The Year
 let countDownDate = new Date("Dec 31, 2022 23:59:59").getTime();
-
+ 
 let counter = setInterval(() => {
   // Get Today's Date
   let todayDate = new Date().getTime();
